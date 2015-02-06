@@ -1,0 +1,190 @@
+
+@dark: rgba(0, 0, 0, .75);
+@light: rgba(0, 0, 0, .1);
+
+.admin-bar {
+	padding-bottom: 100px;
+}
+
+body {
+	margin: 0; padding: 0;
+	overflow-x: hidden;
+
+	> header, > main, > footer {
+		position: relative;
+		width: 100%;
+		overflow-x: hidden;
+
+		> div {
+			position: relative;
+			width: 640px;
+			margin: 0 auto;
+		}
+	}
+
+
+	> main {
+		font-family: "adriane", serif;
+
+		> div {
+			margin-top: 7.5em; margin-bottom: 5em;
+
+			article {
+				font-size: larger;
+				color: rgba(0,0,0,.75);
+
+				> header {
+					h1 {
+						text-align: center;
+						text-transform: uppercase;
+						margin-bottom: 2em;
+
+						&:before,
+						&:after {
+							content: "";
+							position: absolute;
+							height: 5px;
+							border-bottom: 1px solid @light;
+							border-top: 1px solid @light;
+							top: 10px;
+							width: 800px;
+						}
+						&:before {
+							right: 80%;
+							margin-right: 15px;
+						}
+						&:after {
+							left: 80%;
+							margin-left: 15px;
+						}
+					}
+				}
+
+				> div {
+
+					p, li {
+						font-size: 15pt;
+						line-height: 150%;
+					}
+					img {
+						max-width: 100%;
+					}
+				}
+
+				> footer {
+
+					font-size: smaller;
+					margin-top: 4em;
+
+					> a[href='#'] {
+						font-size: 14pt;
+						float: right;
+						color: rgba(0,0,0,.25);
+						margin-top: 1em;
+						opacity: .5;
+					}
+
+					nav {
+						clear: both;
+						display: block;
+						font-family: "john-doe", serif;
+						margin: .25em auto .5em;
+						text-align: center;
+						color: rgba(0,0,0,.4);
+
+						&.social {
+							width: 130px;
+						}
+					}
+				}
+			}
+
+			> footer {
+				margin-top: 12em;
+				opacity: .5;
+				font-family: "john-doe", serif;
+
+				a {
+					display: block;
+					&[rel=next] {
+						float: right;
+					}
+
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+
+	> footer {
+		position: fixed; bottom: 0; left: 0; z-index: 9;
+		background-color: #fff;
+		font-family: "john-doe", serif;
+		font-size: 10pt;
+		padding-top: .5em; margin-top: .5em;
+		border-top: 1px solid rgba(0,0,0,.25);
+
+		> div {
+			opacity: .5;
+		}
+		h1 {
+			margin: 0 0 .5em;
+		}
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		nav {
+			margin: .25em 0;
+
+
+			> * {
+			}
+			a {
+				margin-right: 1em;
+			}
+		}
+	}
+}
+
+
+a {
+	color: inherit;
+}
+nav a, h1 a {
+	text-decoration: none;
+}
+
+blockquote {
+	position: relative;
+	font-size: 18pt;
+	font-style: italic;
+
+	&:before {
+		font-size: 20pt;
+		position: absolute; left: -1em; top: -.20em;
+		content: '>';
+		font-weight: bold;
+		color: #8390f4;
+	}
+
+	a {
+		font-family: "john-doe", serif;
+		font-size: 15pt;
+		font-style: normal;
+		display: block;
+		float: right;
+		color: rgba(0,0,0,.35);
+		text-decoration: none;
+		clear: both;
+		margin-top: .5em;
+
+		&:before {
+			content: "\2014 ";
+		}
+	}
+}
+
