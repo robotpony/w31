@@ -6,55 +6,62 @@
 $imageID = get_post_thumbnail_id();
 $imageURL = wp_get_attachment_image_src($imageID, 'full');
 ?>
-		<div class="layer background" style="background: url(<?= $imageURL[0] ?>) no-repeat;">
-			<div class="overlay"></div>
+		<div class="layer background" style="background: transparent url(<?= $imageURL[0] ?>) no-repeat;">
+
 		</div>
 
-		<div class="layer post-title">
-			<h1><?php the_title(); ?></h1>
+		<div class="layer post-title" data-depth="0.05">
+			<h1>
+				<?php the_title(); ?>
+			</h1>
 		</div>
+
 	</header>
-<?php } else {
-		if (get_the_title()) { ?>
-	<header class="standard-post">
-		<h1><?php the_title(); ?></h1>
-	</header>
-<?php  }
-} ?>
+<?php } else { ?>
+
+	<h1>
+		<?php the_title(); ?>
+	</h1>
+<?php } ?>
+
+<?php
+
+if ($blogcast = nw_blogcastObjectFromPost($post)) { ?>
+
+	<figure class="blogcast" id="<?= $blogcast->id ?>">
+	<p>Listen to this post<?= $blogcast->hasCommentary ? ' (with commentary)' : '' ?></p>
+	<var><?= $blogcast->duration ?></var>
+	<audio controls>
+  		<source src="/podcasts/wv/<?= $blogcast->url ?>.m4a" type="audio/mp4">
+		<source src="/podcasts/wv/<?= $blogcast->url ?>.mp3" type="audio/mpeg">
+  		<source src="/podcasts/wv/<?= $blogcast->url ?>.ogg" type="audio/ogg">
+		Your browser does not support the audio element.
+	</audio>
+	<figcaption>the warpedvisions blogcast</figcaption>
+	</figure>
+
+<?php	} ?>
 
 	<?php the_content(); ?>
 
+			<?php /* comments_template( '', true ); */ // Remove if you don't want comments ?>
+
+	<?php if (!is_page()) { ?> 
 	<footer>
-		<a href="#" onclick="$('#lovinit').toggle(0); return false"><i class="fa fa-heart"></i></a>
 
-		<div id="lovinit" style="display: none;">
-			<nav class="meta">
-				<var>
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<i class="fa fa-bookmark"></i></a>
-				</var>
+		<span class="link">
+			<var>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<date><?php the_time('F j, Y'); ?></date>
+					#
+				</a>
+			</var>
+		</span>
 
-				<date><?php the_time('F j, Y'); ?></date>
-			</nav>
-
-
-			<nav class="social">
-				<span class="tooter" style="float: left;">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-via="robotpony" data-count="none" data-size="large">Discuss</a>
-					</span>
-					<span class="goog" style="float: left; margin-left: 8px; margin-top: 2px;">
-					<div class="g-plusone" data-annotation="none" size="Standard"></div>
-
-				</span>
-			</nav>
-
-			<nav class="admin">
-			<?php edit_post_link('<i class="fa fa-pencil"></i> Edit'); ?>
-			</nav>
-
-
-		</div>
+		<?php the_tags( '<ul class="tags"><li>', '</li><li>', '</li></ul>' ); ?>
 
 	</footer>
+	<?php } ?>
+
 
 </article>

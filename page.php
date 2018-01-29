@@ -2,12 +2,29 @@
 
 <main class="page"><div>
 	<section>
-<?php get_template_part('loop'); ?>
+
+<?php
+
+if (have_posts()) {
+	while (have_posts()) {
+		the_post();
+
+		get_template_part('post', 'part');
+}
+} else {
+
+?>
+
+<article>
+	<p>Nothing here</p>
+</article>
+
+<?php } ?>
+
 	</section>
 
-<footer>
-<?php get_template_part('pagination', 'part'); ?>
-</footer>
+	<section class="sidebar"><?php get_sidebar(); ?></section>
+
 </div></main>
 
 

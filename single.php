@@ -1,13 +1,16 @@
 <?php get_header(); ?>
 
-<main class="single"><div>
+<main><div>
 	<section>
-<?php get_template_part('loop'); ?>
+
+			<?php get_template_part('loop'); ?>
+
 	</section>
 
-<footer>
-<?php get_template_part('pagination', 'part'); ?>
-</footer>
+	<?php get_template_part('pagination', 'part'); ?>
+
+
 </div></main>
+
 
 <?php get_footer(); ?>

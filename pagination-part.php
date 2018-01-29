@@ -1,9 +1,10 @@
 
 <div class="navigation">
 	<nav class="pager">
+		<h2>More things I've written.</h2>
 
-<?php previous_post_link('<span class="prev">%link</span>', '<i class="fa fa-chevron-left"></i> %title'); ?>
-<?php next_post_link('<span class="next">%link</span>', '%title <i class="fa fa-chevron-right"></i>'); ?>
+<?php previous_post_link('<span class="prev">%link</span>', '%title'); ?>
+<?php next_post_link('<span class="next">%link</span>', '%title'); ?>
 
 	</nav>
 </div>

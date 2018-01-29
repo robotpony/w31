@@ -1,19 +1,18 @@
 <?php get_header(); ?>
 
-	<main role="main">
+	<main><div>
 		<!-- section -->
 		<section>
-
-			<h1><?php _e( 'Tag Archive: ', 'html5blank' ); echo single_tag_title('', false); ?></h1>
-
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
+			<?php
+				nw_get_tagged_posts(
+					single_tag_title('Things found in: ', false),
+					strtolower(single_tag_title('', false)),
+					$displayedPosts,
+					50
+				);
+			?>
 		</section>
 		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+	</div></main>
 
 <?php get_footer(); ?>

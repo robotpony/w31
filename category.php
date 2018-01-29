@@ -1,19 +1,13 @@
 <?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<main><div>
+	<h4><?php _e( 'Found in: ', 'html5blank' ); the_category(' + '); ?></h4>
+	<section>
+<?php get_template_part('loop'); ?>
+	</section>
 
-			<h1><?php _e( 'Categories for ', 'html5blank' ); single_cat_title(); ?></h1>
+<?php get_template_part('pagination', 'part'); ?>
 
-			<?php get_template_part('loop'); ?>
-
-			<?php get_template_part('pagination'); ?>
-
-		</section>
-		<!-- /section -->
-	</main>
-
-<?php get_sidebar(); ?>
+</div></main>
 
 <?php get_footer(); ?>

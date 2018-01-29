@@ -7,11 +7,10 @@ if (have_posts()) {
 		get_template_part('post', 'part');
 	}
 } else {
-	
+
 ?>
 	<article>
 		<p>Nothing here</p>
 	</article>
 
 <?php } ?>
-
