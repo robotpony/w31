@@ -1,14 +1,14 @@
 /*
-Theme Name: the3
-Theme URI: http://napkinware.ca/themes/the3
+Theme Name: Warped 31
+Theme URI: http://napkinware.ca/themes/w31
 Author: Bruce Alderson (Napkinware)
 Author URI: http://napkinware.ca
-Description: A single column theme.
-Version: 3
+Description: I bright blog theme
+Version: 30
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: awesome-sauce
-Text Domain: the3
+Text Domain: w31
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -16,4 +16,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 
 
+@font-face {
+    font-family: 'unborn editrion';
+    src: url('fonts/unborneditrion.woff2') format('woff2'),
+        url('fonts/unborneditrion.woff') format('woff'),
+        url('fonts/unborneditrion.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: 'unborn editrion';
+    src: url('fonts/unborneditrion_1.woff2') format('woff2'),
+        url('fonts/unborneditrion_1.woff') format('woff'),
+        url('fonts/unborneditrion_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

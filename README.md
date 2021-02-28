@@ -1,2 +1,3 @@
-# w30
-Warped theme 30 (a simple base WordPress theme)
+# Warped 31
+
+A simple blog theme.

@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?> class="no-js">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+		<title><?php wp_title(''); ?><?php if (wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
 
@@ -13,16 +13,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-		<script src="//use.typekit.net/euq2gkk.js"></script>
-		<script>try{Typekit.load();}catch(e){}</script>
+		<meta NAME="ROBOTS" CONTENT="NOODP">
+		<link rel="author" href="https://twitter.com/robotpony" />
+		<link rel="canonical" href="https://warpedvisions.org" />
+		
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,700i|Work+Sans:100,400,500,700" rel="stylesheet">
 
 		<?php wp_head(); ?>
 
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<?php include_once('_parts/ga.php'); ?>
 
 	</head>
 <?php flush(); ?>
 	<body <?php body_class('blog'); ?>>
+
+	<header>
+		<div class="flourish left"><hr><hr><hr><hr></div>
+		<div class="flourish right"><hr><hr><hr><hr></div>		
+		<div>
+			<h1>
+				<a href="/">warped<b>visions</b>.<em>org</em>
+					<?php /* bloginfo('name'); */ ?>
+				</a>
+			</h1>
+		</div>
+
+	</header>

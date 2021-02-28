@@ -1,0 +1,18 @@
+
+@font-face {
+    font-family: 'unborn editrion';
+    src: url('fonts/unborneditrion.woff2') format('woff2'),
+        url('fonts/unborneditrion.woff') format('woff'),
+        url('fonts/unborneditrion.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'unborn editrion';
+    src: url('fonts/unborneditrion_1.woff2') format('woff2'),
+        url('fonts/unborneditrion_1.woff') format('woff'),
+        url('fonts/unborneditrion_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

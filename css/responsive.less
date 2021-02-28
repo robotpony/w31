@@ -1,26 +1,223 @@
-/*
+/* Simple responsive mobile sizes
+
+	Goals:
+
+		* cascaded responsive sizes, so fewer changes are needed on smallest screens
+		* prefer percentage widths and div blocks (versus absolute positioning and fixed widths)
+		* focus on readability first, brand-like stuff is the icing
+
 */
 
 @media only screen and (max-width : 1024px)  {
 
+	body {
 
+		> header, > main, > footer, > aside {
+			position: relative;
+			width: 100%;
+
+			> div {
+				position: relative;
+				width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	body > main > div {
+		> section {
+			article {
+				> header {
+					width: 200%; left: -50%;
+					div.background {
+
+					}
+					.post-title {
+						h1 {
+							width: 50%;
+						}
+					}
+				}
+
+				p, li, blockquote, time, var {
+					font-size: 18pt;
+				}
+
+				img, div > img {
+					max-width: 100%; max-height: none;
+					width: auto !important; height: auto !important;
+				}
+			}
+		}
+	}
+	body > footer {
+		min-height: 250px; height: auto;
+
+		> div {
+			> nav {
+				a {
+					display: block;
+
+					width: 49%;
+					margin-left: .5%;
+					margin-bottom: .5%;
+
+					& + a {
+						border-left: 2px solid @wBlueBg;
+					}
+				}
+			}
+		}
+		div.flourish {
+			bottom: 4 * 3 * @p2;
+			
+			hr {
+				width: 100%; height: 4 * @p2;
+			}
+		}
+	}
+
+	body.page-template-tabloid {
+		width: 100%;
+
+		> header, > main, > footer, > aside {
+			> div {
+				width: 100%;
+			}
+		}
+
+		section.featured,
+		section.newest,
+		div.note {
+			width: 100% !important;
+			padding-right: 0; padding-left: 0;
+			
+			article {
+				width: 85%;
+				padding-left: 5%; padding-right: 5%;
+			}
+		}
+		div.note {
+			> p {
+				font-size: 9px;
+			}
+		}
+		aside {
+			position: relative; top: auto; right: auto;
+			width: 100%;
+
+			section {
+				padding-left: @p3; padding-right: @p3;
+			}
+		}
+
+	}
 }
 
+@media only screen and (max-width : 880px) {
+	body > footer {
+		overflow: hidden;
+		
+		div.flourish {
+			bottom: 6 * 3 * @p2;
+			
+			hr {
+				width: 100%; height: 6 * @p2;
+			}
+		}
+		> div {
+			> nav {
+				a {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}	
+	}
+}
 @media only screen and (max-width : 768px)  {
+	article {
+		h1 {
+			margin-bottom: 1em;
+			font-size: 24pt;
+		}
+	}
 
 }
 
 @media only screen and (max-width : 640px)  {
 
-	body {
+	body > header {
 
-		> header, > main, > footer {
-			position: relative !important;
+		h1 {
+		}
+	}
 
-			> div {
-				width: 90%;
-				margin: 0 auto;
+	body > footer {
+
+		> div {
+			> nav {
+				a {
+					width: 100%;
+					margin-left: 0;
+				}
 			}
+		}
+
+	}
+	body > main {
+		> div {
+			padding-top: 0;
+		}
+	}
+
+	body > main > div {
+		> section {
+			article {
+				> header {
+					height: 375px;
+					.post-title {
+						h1 {
+							padding-top: 1em;
+							text-align: center;
+							font-size: 36pt;
+
+							var {
+								display: none;
+							}
+						}
+					}
+				}
+				p, li, blockquote, time, var {
+					font-size: 15pt;
+				}
+			}
+		}
+	}
+
+	body > main > div > section > article {
+
+		h1 {
+			font-size: 22pt;
+		}
+		figure {
+			display: block;
+			margin: auto 1em;
+			img {
+				width: 100%;
+			}
+			&.pull-right, &.pull-left {
+				float: none;
+			}
+		}
+
+		p, li, dl, blockquote {
+			font-size: 14pt;
+
+		}
+
+		h2, h3, h4, h5 {
+			text-align: center;
 		}
 	}
 
@@ -28,10 +225,45 @@
 
 @media only screen and (max-width : 480px)  {
 
+	body > header {
 
+		margin-bottom: 15px;
+
+		h1 {
+		}
+	}
+
+	body > main > div {
+		> section {
+			article {
+				> header {
+					height: 300px;
+					.post-title {
+						h1 {
+							font-size: 24pt;
+							padding-top: 1.5em;
+
+						}
+					}
+				}
+			}
+		}
+	}
 
 }
 
 @media only screen and (max-width : 320px)  {
 
+	body > header {
+		h1 {
+		}
+	}
+
+	article {
+
+		p, li, dl, blockquote {
+			font-size: 13pt;
+
+		}
+	}
 }
