@@ -8,9 +8,9 @@ This theme attempts to use WordPress intentfully, paired with simple semantic HT
 
 * uses Less for CSS
 * uses pretifyjs for source
-* simple + semantic HTML
-	* div/spans are for logical and helping with display blocking
-	* section/article/header/footer used for posts and post lists
+* simple + mostly semantic HTML
+	* div/spans are for logical blocking (page and element grids)
+	* section/article/header/footer equivalent page objects
 	* other standard markup used where it makes sense (paragraphs -> p, headings -> h*, lists -> li, etc.)
 * uses WP query functions safely/efficiently
 	* combined a bunch of agency hacks here
