@@ -1,17 +1,21 @@
 # Warped v31
 
-This is the 31st theme for my blog (warpedvisions.org). It's a mostly responsive WordPress theme designed for technical essays and readability. The theme was designed before WordPress added blocks, but still handles the old text and markdown style uses, which is how I use it to this day.
+This is the 31st theme for my blog (warpedvisions.org). It's a mostly responsive WordPress theme designed for technical essays and readability. The theme was designed before WordPress added blocks, but still handles the old text and markdown styles.
 
-This theme attempts to use WordPress intent-fully paired with simple semantic HTML5 (sections, asides, etc.) and has a few JS functions for customizing the appearance of content (like anchors).
+This theme attempts to use WordPress intentfully, paired with simple semantic HTML5 and has a few JS functions for customizing the appearance of content (like anchors).
 
 ## Features
 
 * uses Less for CSS
-* simple + semantic HTML (divs/spans are for inline and blocking, otherwise use what makes sense)
+* uses pretifyjs for source
+* simple + semantic HTML
+	* div/spans are for logical and helping with display blocking
+	* section/article/header/footer used for posts and post lists
+	* other standard markup used where it makes sense (paragraphs -> p, headings -> h*, lists -> li, etc.)
 * uses WP query functions safely/efficiently
+	* combined a bunch of agency hacks here
 * custom fields used for adding media (like podcasts) to posts
-* good example hand-coded theme, without extra cruft and abstraction
-
+* makes a decent example of a hand-coded theme, without extra cruft and abstraction
 
 ### Tabloid custom page
 
